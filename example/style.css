@@ -1,0 +1,12 @@
+.container{
+    padding: 0px 30px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.img-4{
+    width: 32%;
+    margin-bottom: 3%;
+}
