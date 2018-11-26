@@ -28,12 +28,23 @@ class Lightbox {
             })
         }
     }
+
+    /**
+     * Open LightBox Popup
+     * @param event
+     */
     open(event) {
-        const e = document.createElement('div');
-        e.innerHTML = modal;
-        this.body.appendChild(e);
-        // console.log(event);
-        this.body.classList.toggle("lightbox-backdrop-absolute");
+        let e;
+        if (document.querySelectorAll('.lightbox-backdrop').length === 0) {
+            e = document.createElement('div');
+            e.className= 'lightbox-backdrop';
+            e.innerHTML = modal;
+            this.body.appendChild(e);
+            this.body.classList.toggle("lightbox-backdrop-absolute");
+            this.body.classList.toggle("open");
+        } else {
+            this.body.classList.toggle("open");
+        }
     }
 }
 
